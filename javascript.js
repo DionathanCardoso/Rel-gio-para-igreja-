@@ -6,16 +6,16 @@ var trocarFundoTela = document.getElementById("corpo");
 
 function relogio() {
     //Aqui esta a variavis do relógio
-    var data = new Date();
-    var hor =  data.getHours();
-    var min =  data.getMinutes();
-    var seg = data.getSeconds();
+    let data = new Date();
+    let hor =  data.getHours();
+    let min =  data.getMinutes();
+    let seg = data.getSeconds();
 
     //Aqui é a variaveis da Data em português.
-    var dia = data.getDate();
-    var mes = data.getMonth();
-    var anos = data.getFullYear();
-    var semana = data.getDay();
+    let dia = data.getDate();
+    let mes = data.getMonth();
+    let anos = data.getFullYear();
+    let semana = data.getDay();
 
     if (hor < 10) {
         hor = "0" + hor;
@@ -26,7 +26,7 @@ function relogio() {
     if (seg < 10) {
         seg = "0" + seg;
     }
-    if (hor == 19 && min >= 00) {
+    if (hor == 19 && min >= 0) {
         trocarFundoTela.style.backgroundImage = "url('./imgs/jesus-4336337_1920.jpg')";
         document.getElementById("relogio").style.color = "#004064";
         document.getElementById("datas").style.color = "#004064";
@@ -46,7 +46,7 @@ function relogio() {
         document.getElementById("datas").style.color = "#101b25";
     }
     
-    else if (hor == 21 || hor == 00 && hor < 19) {
+    else if (hor == 21 || hor == 0 && hor < 19) {
         trocarFundoTela.style.backgroundImage = "url('./imgs/jesus-4336337_1920.jpg')";
         document.getElementById("relogio").style.color = "#102939";
         document.getElementById("datas").style.color = "#102939";
@@ -63,7 +63,3 @@ function relogio() {
 
 var timer = setInterval(relogio, 1000);
 
-/*function menssagem(){
-    
-    }
-        */
